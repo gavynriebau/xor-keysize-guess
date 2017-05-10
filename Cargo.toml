@@ -1,0 +1,8 @@
+[package]
+name = "xor-keysize-guess"
+version = "0.1.0"
+authors = ["gavyn <gavyn.riebau@gmail.com>"]
+
+[dependencies]
+hamming = "0.1.3"
+clap = "2.24.1"
