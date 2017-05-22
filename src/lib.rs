@@ -19,7 +19,7 @@ pub fn avg_normalized_hamming_distance(file_contents : &Vec<u8>, max_keysize : u
 
         // Calculate the mean normalized hamming distance over a
         // number of samples to try to improve accuracy.
-        for idx in 1..3 {
+        loop {
 
             let left_chunk = chunks.next();
             let right_chunk = chunks.next();
@@ -42,7 +42,7 @@ pub fn avg_normalized_hamming_distance(file_contents : &Vec<u8>, max_keysize : u
             let normalized_hamming = hamming_dist as f32 / keysize as f32;
             average_hamming_dist += normalized_hamming;
 
-            debug!("{:4.3} is the normalized hamming distance for keysize {} and block {}", normalized_hamming, keysize, idx);
+            debug!("{:4.3} is the normalized hamming distance for keysize {} and block {}", normalized_hamming, keysize, num_chunks_compared);
 
             num_chunks_compared += 1;
         }
