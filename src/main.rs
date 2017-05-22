@@ -81,7 +81,7 @@ fn main() {
 
         if num_chunks_compared != 0 {
             average_hamming_dist = average_hamming_dist / num_chunks_compared as f32;
-            println!("{:4.3} average hamming distance for keysize {}", average_hamming_dist, keysize);
+            println!("{:4.3} average normalized hamming distance for keysize {}", average_hamming_dist, keysize);
         } else {
             debug!("Not enough data in input file to check a keysize of '{}'", keysize);
         }
