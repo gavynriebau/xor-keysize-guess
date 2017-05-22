@@ -2,6 +2,13 @@
 name = "xor-keysize-guess"
 version = "1.0.0"
 authors = ["gavyn <gavyn.riebau@gmail.com>"]
+description = "Command line app to guess the size of a key that was used to XOR encrypt a file"
+documentation = "https://github.com/gavynriebau/xor-keysize-guess"
+homepage = "https://github.com/gavynriebau/xor-keysize-guess"
+repository = "https://github.com/gavynriebau/xor-keysize-guess"
+keywords = ["XOR", "cryptography", "cli"]
+categories = ["command-line-utilities", "cryptography"]
+license = "MIT"
 
 [dependencies]
 hamming = "0.1.3"
