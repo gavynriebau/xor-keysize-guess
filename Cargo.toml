@@ -1,6 +1,6 @@
 [package]
 name = "xor-keysize-guess"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["gavyn <gavyn.riebau@gmail.com>"]
 description = "Command line app to guess the size of a key that was used to XOR encrypt a file"
 documentation = "https://github.com/gavynriebau/xor-keysize-guess"
@@ -11,7 +11,7 @@ categories = ["command-line-utilities", "cryptography"]
 license = "MIT"
 
 [dependencies]
-hamming = "0.1.3"
+xor-utils = "0.3.0"
 clap = "2.24.1"
-log = "0.3.7"
-env_logger = "0.4.2"
+env_logger = "0.4.3"
+log = "0.3.8"

@@ -1,6 +1,6 @@
 
 extern crate clap;
-extern crate xor_keysize_guess;
+extern crate xor_utils;
 
 #[macro_use] extern crate log;
 extern crate env_logger;
@@ -40,7 +40,7 @@ fn main() {
 
     let max_keysize_str = matches.value_of("MAX_KEYSIZE").unwrap();
     let max_keysize = max_keysize_str.parse::<usize>().unwrap();
-    let key_to_distance_dict = xor_keysize_guess::avg_normalized_hamming_distance(&file_contents, max_keysize);
+    let key_to_distance_dict = xor_utils::avg_normalized_hamming_distance(&file_contents, max_keysize);
 
     for (keysize, distance) in key_to_distance_dict {
         println!("{:4.3} average normalized hamming distance for keysize {}", distance, keysize);
